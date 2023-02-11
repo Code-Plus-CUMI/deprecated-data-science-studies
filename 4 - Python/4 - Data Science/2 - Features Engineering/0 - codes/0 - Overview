@@ -1,0 +1,15 @@
+	************************************
+	** Feature Engineering - Overview **
+	************************************
+
+For a feature to be useful, it must have a relationship to the target that your model is able to learn. Linear models, for instance, are only able to learn linear relationships. So, when using a linear model, your goal is to transform the features to make their relationship to the target linear.
+
+The key idea here is that a transformation you apply to a feature becomes in essence a part of the model itself. Say you were trying to predict the Price of square plots of land from the Length of one side. Fitting a linear model directly to Length gives poor results: the relationship is not linear.
+
+-*-*-*-*-
+
+	*********
+	** Tip **
+	*********
+
+Before start doing Feature Engineering, create and train a Baseline Model in order to measure if the Feauture Engineering processes are giving better or worse results.
