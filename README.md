@@ -44,10 +44,6 @@
 
 > **Linkedin:** **[linkedin.com/in/csfelix/](https://www.linkedin.com/in/csfelix/)**
 
-> **Instagram:** **[instagram.com/c0deplus/](https://www.instagram.com/c0deplus/)**
-
-----
-
 > **Portfolio:** **[CSFelix.io](https://csfelix.github.io/)**
 
 > **Kaggle:** **[DSFelix](https://www.kaggle.com/dsfelix)**
