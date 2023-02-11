@@ -1,0 +1,31 @@
+1) Overlap Similarity
+
+\ Used to find Category Hierarchy (Caregóry Hairarki)
+
+\ The algorithm calculates the size of the intersection divided by the size of the smaller of the two sets
+
+			O (A,B) =    |A & B|
+					  -------------
+					  min(|A|, |B|)
+
+2) Pearson Similarity Algorithm
+
+\ Calculates how similar the nodes are between them
+
+\ Used for recommendations, the score range is between -1 to +1. How close to -1 (negative correlation) and +1 (positive correlation), the more similar the nodes are
+
+3) Personalized Page Rank Algorithm
+
+\ the difference between the Personalized and the Common Pagee Rank is that the Personalized one allows you to set what's the area of the source nodes to calculate the ranks, while this one uses a random area everytime the algorithm is running
+
+\ the Personalized Versioon is a variation of the PageRank algorithm that is biased (default dampingValue is 0.85) towards a set of source nodes 
+
+4) Label Propagation Algorithm
+
+\ good for fast grouping at scale
+
+\ the score is calculated by the division of the intersection and the union of the two sets
+
+		LPG (A, B) = |A & B|
+		             -------
+		             |A || B|

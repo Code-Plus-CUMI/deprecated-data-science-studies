@@ -1,0 +1,102 @@
+2.0 - Named Graphs VS Anonymous Graphs
+
+- Named Graphs: reusability; the output of one graph algorithm can be used as input to another one; doesn't have so many graph algorithms available; you can work with multiple graph algorithms at the same time
+	
+	\ Native Projection: projects a graph from Neo4J into an in-memory graph
+
+	\ Cypher Projection: projects a graph from data that exists only at query time, which means, if yoou close the query panel, the cypher projection won't been made modifications in the database
+
+- Anonymous Graphs: used to run quickly graphs algorithms; non-resuability; the output of one graph algorithm can't be used as input to anotther one; has so many graph algorithms available; you can't work with multiple graph algorithms at the same time
+
+	\ Native Projection: projects the in-memory graph and executes the graph algorithm simultaneously
+
+	\ Cypher Projection: projects the in-memory graph and executes the graph algorithm simultaneously
+
+OBS.: in both Named and Anonymous Graphs, always use the NATIVE PROJECTION when the database is in PRODUCTION
+
+-*-*-*-*-
+
+2.1 - Graph Algorithms - Modes of Execution
+
+- Stream: return the results like Cypher result rows; doesn't write back in Neo4J database; doesn't make modifications in the database.
+
+- Stats: returns statistical results like counts and percentiles in Cypher result rows; doesn't write back in Neo4J database; doesn't make modifications in the database.
+
+- Write: writes results of the algorithm computations like Cypher writing queries operate (CREATE, MERGE, ALTER, DELETE) in the database; writes back in the Neo4J database; makes modifications in the database.
+
+- Mutate: writes results of the algorithm computations back to the in-memory graph; writes back in the Neo4J projected database, and not in the original one; makes modifications in the projected database.
+
+-*-*-*-
+
+3 - Types of Algorithms
+
+3.1 - Community Detection
+
+Used to discover and understand structure of complex networks
+
+	3.1.1 - Weakly Connected Components (unionFind)
+
+	\ finding disconnected subgraphs
+	\ fraud detection
+	\ knowing how a network is connected
+
+	3.1.2 - Label Propagation
+
+	\ finding and to describe communities in a graph
+	\ preprocessing data (classification)
+	\ semi-supervised community detection (classification)
+	\ finding similarities between nodes and subgraphs
+
+	3.1.3 - Louvain Modularity
+
+	\ community detection in large networks
+	\ weights between the nodes in the community
+	\ weights between the communities
+	\ finding hierarchical structures between the nodes and communities
+
+	3.1.4 - Triangle Count
+
+	\ estimating stability
+	\ scoring for machine learning
+	\ part of the Local Clustering Coefficient Calculation
+	\ calculating the number of triangles all nodes belongs to
+
+	3.1.5 - Local Cluster Coefficient
+
+	\ measuring and comparing how tighly is a relationship between nodes with how tighly it could be clustered
+	\ estimating stability
+	\ scoring for machine learning
+	\ finding structural holes
+	\ detecting communities between web pages
+
+3.2 - Centrality Algorithms
+
+Used to find the central nodes (most influencial) in a graph, like, the key accounts on social medias.
+
+	3.2.1 - Page Rank
+
+	\ recommendations
+	\ fraud detection
+	\ feature engineering for machine learning
+	\ rank nodes
+
+	3.2.2 - Betweenness Centrality
+
+	\ identify bridges
+	\ uncover control points
+	\ find bottlenecks and vulnerabilities
+	\ finding the bridges that brings the centrality to other nodes ("middleman" in a network that might be used to connect parts of a graph)
+
+3.3 - Similarity Algorithms
+
+Used to evaluate how alike some nodes are between them considering individual properties, relatioonships and relationships properties
+
+	3.3.1 - Node Similarity (Jaccard Index)
+
+	\ two nodes are considered similar if they share many of the same neightbors and relationships
+	\ as close to 1 the score between the node is, as alike the nodes are
+	\ the score is calculated by the intersection of two sets divided by the union of sets
+
+	\ finding recommendations of similar items
+	\ first step of analyzing a bipartite network
+	\ part of link prediction analysis

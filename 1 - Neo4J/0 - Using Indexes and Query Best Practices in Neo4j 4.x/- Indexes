@@ -1,0 +1,28 @@
+- Indexes
+
+	\ definition and properties
+	\ how to create
+	\ how to use
+	\ how to drop
+
+- Full-Text Schema
+
+	\ definition and properties
+	\ how to create
+	\ how to use
+	\ how to drop
+
+-*-*-*-
+
+- Parameters
+
+	\ :param
+	\ :params {}
+
+- Analysing Queries
+
+	\ EXPLAIN
+	\ PROFILE
+	\ :queries
+	\ issues with queries (taking too long time to proccess or return the result)
+	\ killing queries

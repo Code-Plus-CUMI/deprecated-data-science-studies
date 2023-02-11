@@ -1,0 +1,9 @@
+1) Exploratory Data Analysis
+
+db.labels >> return all node labels
+
+db.index.fullText.createNodedIndex('fullTextName', ['Labels'], ['Properties'])
+
+Link Prediction >> Predict new relationships between nodes in the future
+
+The closer two nodes are, the more likely there will be a relationship between them.
