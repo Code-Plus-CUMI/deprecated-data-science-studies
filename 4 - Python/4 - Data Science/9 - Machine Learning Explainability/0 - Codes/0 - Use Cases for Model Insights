@@ -1,0 +1,7 @@
+Questions to Analyse:
+
+\ What features in the data did the model think are most important?
+
+\ How does each feature affect the model's predictions in a big-picture sense (what is its typical effect when considered over a large number of possible predictions)?
+
+\ For any single prediction from a model, how did each feature in the data affect that particular prediction?
