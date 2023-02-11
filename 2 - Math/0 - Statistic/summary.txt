@@ -1,0 +1,50 @@
+(*) 0 - Displaying a single quantitative variable
+|
+| _ (*) Dot Plot || Histogram
+|
+| _ (*) Mean, Median and Mode || Left Tail, Right Tail and Symmetry || Mean VS Median
+|
+| _ (*) Interquartile Range || Box and Whisker Plots || Outliers || Stem and Leaf Plot
+
+-*-*-*-
+
+(*) 1 - Analyzing a Single Quantitative Variable
+|
+| _ (*) Population, Sample, Variance, Sample Variance and Standard Deviation || Mean and Standard Deviation VS Median and IQR || Comparing Higher and Lower Variance
+|
+| _ (*) Z-Score || Comparing Z-Scores || Empirical Rule to Normal Distributions || Types of Distributions/Histograms || Z-Score Exercises
+
+
+-*-*-*-
+
+(*) 2 - Two way Tables
+|
+| _ (*) Venn Diagrams and Two Way Tables
+|
+| _ (*) Marginal and Condicional Distributions (watch class)
+
+-*-*-*-
+
+(*) 3 - Scatter Plots
+|
+| _ (*) Scatter Plots' Classifications || Stimating Values || Slope || Correlation Coefficient
+|
+| _ (*) Residuals and Estimations || Residual Plot || Deciding Between the Linear and Non-Linear Relationship (whats)
+
+-*-*-*-
+
+(*) 4 - Study Design (whats)
+|
+| _ (*) Correlation VS Causality
+|
+| _ (*) Type of Bias
+|
+| _ (*) Explanatory Variable VS Response Variable
+|
+| _ (*) How to Choose Samples
+|
+| _ (*) Types of Experiments 
+|
+| _ (*) Can we stablish Causality to Experimental Studies?
+|
+| _ (*) Experiments to Find Out Causality and / or Correlation
