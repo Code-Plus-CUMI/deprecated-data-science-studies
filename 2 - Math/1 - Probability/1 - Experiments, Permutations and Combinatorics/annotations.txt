@@ -1,0 +1,14 @@
+Put the Formula About Permutations and Combinatorics with and without Replacements
+
+\ Source: https://towardsdatascience.com/how-to-think-about-combinatorics-like-a-data-scientist-bddbd18eff80
+
+- Permutations with Replacement: 
+			n^r
+- Permutations wihout Replacement:
+			n! / (n-r)!
+
+- Combinatorics without Replacement:
+			n! / ((n-r)! * r!)
+
+- Combinatorics with Replacement:
+			(n+r-1)! / (n-1)! * r!

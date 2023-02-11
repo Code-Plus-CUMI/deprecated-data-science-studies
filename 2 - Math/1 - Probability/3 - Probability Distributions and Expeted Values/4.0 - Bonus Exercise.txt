@@ -1,0 +1,5 @@
+A deck has 52 cards within 13 clubs, 13 spades, 13 hearts and 13 diamonds. Besides, half of the cards are reds and half of 'em are black.
+
+Bob and Alice made a bet about who'll make the laundry. They'll draw one card and check: if the first card is red, so Bob will make the laundry. Else, they'll replace the card, shuffle the deck and draw anotherr one. If the second or later card is red, so Alice will make the laundry.
+
+In this bet, both of players has a fair chance to win, 'cuz the probability the first card be red or not is 50% so, Bob and Alice have 50% chance to do the laundry.

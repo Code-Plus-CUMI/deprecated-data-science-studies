@@ -1,0 +1,53 @@
+	*******************
+	*** Probability ***
+	*******************
+
+(*) 0 - Experiments, Permutations and Combinatorics
+
+|
+|
+(*)- - Experiments Pattern || Benford's Law
+|
+|
+(*) - - (txt too) Permutation || Combinations || Probability Examples 
+
+-*-*-*-
+
+(*) 1 - Venn Diagrams, Multiplication Rule and Conditional Rule
+|
+|
+(*) - - Venn Diagrams with AND-OR Rule
+|
+|
+(*) - - Multiplication Rule Independent Events || Multiplication Rule Dependent Events
+|
+|
+(*) - - Conditional Rule Independent Events || Conditional Rule Dependent Events
+|
+|
+(*) - - Conditional Rule Baye's Theorem || Conditional Rule Tree Diagram
+
+-*-*-*-
+
+(*) 2 - Probability Distributions and Expected Values
+
+|
+|
+(*) - - Discrete Probability Distribution || Check if Probability is Valid || Exercises
+|
+|
+(*) - - Expected Values || Understanding Expected Values || Exercises
+|
+|
+(*) - - Expected Values VS Mean || Bonus Exercise
+
+-*-*-*-*-
+
+(*) 3 - Poisson Distribution
+
+|
+|
+(*) - - Intro || Properties || Equation
+|
+|
+(*) - - Exercises

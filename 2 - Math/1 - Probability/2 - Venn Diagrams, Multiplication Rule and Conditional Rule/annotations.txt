@@ -1,0 +1,5 @@
+- Events Dependents
+- Events Independents
+
+- Events Mutual Exclusive
+- Events Non-Mutual Exclusive
