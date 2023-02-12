@@ -1,0 +1,118 @@
+#		*****************************
+#		** Data Science - Road Map **
+#		*****************************
+#
+# - Model Project: https://www.kaggle.com/code/dsfelix/spaceship-titanic-competition
+#
+
+---- 0 - Documentation ----
+
+\ Problem Description (context and main goal)
+\ Files Descriptions (train/validation/test datasets, submissions, how the datasets have been extracted, ...)
+\ Variables (name and description)
+\ Target Variable (name, description and values examples)
+\ Model Evaluation Metric (description, goal, equation and example)
+\ Dataset Limitations
+\ Goals
+\ Setup (tools, packages and commands to install the packages)
+\ Aknowledges
+
+
+
+---- 1 - Descriptive Analysis ----
+
+\ Import and Set up Libraries, Create Constants
+\ Read Dataset, Parse Dates and Encode Characters if Needed
+\ Check out Dataset Shape
+\ Split Dataset into Features and Target
+\ Check out Missing Values (numbers and plots)
+\ Check out Data Types and Make Conversions if Needed
+\ Check out String Features (convert them to lower case, treat duplicated simblings values and treat typos)
+\ Convert String Features into Categorical Features
+\ Check out Data Leakage (Target Leakage, Train-Test Contamination and Stratification) and Drop Features
+\ Treat Time Series Features
+\ Treat GeoSpatial Features
+
+
+
+---- 2 - Statistical Analysis ----
+
+\ Use Describe() Function for Numerical and Categorical Features (add new Descriptive Statistics into it, like Standard Error, Variance, Median, Absolute Median Deviation, Skewness, Kurtosis and Range)
+
+\ Check out the Numerical Features Histogram to see which Distribution they have
+
+\ Check out the Categorical Features Value_Counts to see which Distribution they have
+
+\ Create Frequence and Cross Tables for Categorical Features
+
+\ Check out the Correlation between the Numerical Features (use corr() function in pandas and create HeatMaps Plots; check out the need to exclude Na/Missing Values)
+
+\ Make Hypothesis Testing applying a 95% Confidence Interval (T-Test, Z-Test, ANOVA and Chi-Squared Test)
+
+\ Use Regression Analysis to model the relationship between numerical
+columns and a categorical or numerical target column (Linear Regression, Logistic Regression and K-Means Clusters)
+
+\ Generate Summary Reports (Autoviz and Pandas Report Libraries)
+
+
+
+---- 3 - Datas Transformations ----
+
+\ Split Dataset into Training and Validation
+\ Filter Good and Bad Labels
+\ Check the Need to use Imputers, Encoders, Label Encoders and Standardizations
+\ Check out for Outliers
+
+
+
+---- 4 - Features Engineering ----
+
+\ Mutual Information (MI)
+\ K-Means Clustering and Elbow Method (biggest drop in the plot)
+\ Principal Component Analysis (PCA)
+
+
+
+---- 5 - Base Models ----
+
+\ Pipelines (Imputers, Encoders, Label Encoders and Standardizations)
+\ Create Simple Models
+\ Create XGBoost Models
+\ Create Deep Learning Models
+
+
+
+---- 6 - Evaluating Models ----
+
+\ Cross-Validation
+\ Evaluation Metric
+\ Overfitting and Underfitting
+\ Choose the Best Model
+
+
+
+---- 7 - Model Explainability ----
+
+\ Permutation Importance
+\ Summary Plots
+\ Partial Plots
+\ Contribution\Dependence Plots
+
+
+
+---- 8 - Making Predictions ----
+
+\ Make Predictions with Test Dataset
+\ Export Model in Pickle Format
+\ Load Model in Pickle Format
+\ Create a Simple Kernel to use the model and make Predictions
+
+
+
+---- 9 - Reach Me Section ----
+
+\ E-mail
+\ LinkedIn
+\ Portfolio
+\ GitHub
+\ Kaggle

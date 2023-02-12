@@ -1,0 +1,13 @@
+#		**************************
+#		** Dashboard - Road Map **
+#		**************************
+#
+
+
+---- 0 - Setting Up ----
+
+\ Load Data
+\ Filter and Transform Data
+\ Prepare the Front-End (add explanations, filter fields and plots)
+\ Add Metric Cards (dinamic or static)
+\ Add Plots (dinamic or static)

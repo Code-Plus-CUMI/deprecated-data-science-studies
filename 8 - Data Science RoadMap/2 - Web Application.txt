@@ -1,0 +1,13 @@
+#		********************************
+#		** Web Application - Road Map **
+#		********************************
+#
+
+
+
+---- 0 - Setup ----
+
+\ Create Front-End Application
+\ Create Back-End Application
+\ Load Model in Pickle
+\ Consume the Model in Pickle
