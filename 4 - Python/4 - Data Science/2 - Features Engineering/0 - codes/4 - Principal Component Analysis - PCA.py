@@ -1,61 +1,34 @@
 """
-	
-	**********************************
-	** Principal Component Analysis **
-	**********************************
+    
+    **********************************
+    ** Principal Component Analysis **
+    **********************************
 
-Principal Component Analysis (PCA) is used to create new Features
+    Principal Component Analysis (PCA) is used to create new Features
 combining other Features. In general, we get these new Features
 by tracing diagonal lines (axes) over the scatter plot between the
 two features we would like calculate the PCA.
 
-After that, the model will calculate the correlation and the
+    After that, the model will calculate the correlation and the
 variance between these two features and return the Components
 (new Features).
 
-{ image 4 }
+{ image 1.0 }
 
-These new features are called the principal components of the
+    These new features are called the principal components of the
 data. The weights themselves are called loadings. There will be
 as many principal components as there are features in the
 original dataset: if we had used ten features instead of two,
 we would have ended up with ten components.
-
--*-*-*-*-
-
-- PCA Best Practices:
-
-	/ PCA only works with numeric features, like continuous
-quantities or counts, so don't forget to Encode the Categorical
-Features;
-
-	/ PCA is sensitive to scale. It's good practice to standardize
-your data before applying PCA, unless you know you have good
-reason not to;
-
-	/ Consider removing or constraining outliers, since they can
-have an undue influence on the results;
-
--*-*-*-*-
-
-- When to use PCA:
-
-    / when the dataset has a bunch of features (data set compression);
-    / when the features are multi-colinear (there's a significant 
-number of linear correlations between them);
-    / when our goal is to apply denoising;
-    / when you want to check out whether clusters have similar
-properties and attributes
 """
 
-# 0 - Importing libraries, creating functions to plot PCA's
-# Variances and to calculate Mutual Information (MI), and reading
-# the dataset
+# ---- Importing Libraries and Defining Functions ----
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
 from sklearn.feature_selection import mutual_info_regression
+from sklearn.decomposition import PCA
 
 def plot_variance(pca, width=8, dpi=100):
 
@@ -79,13 +52,10 @@ def plot_variance(pca, width=8, dpi=100):
     return axs
 
 def make_mi_scores(X, y, discrete_features):
-	mi_scores = mutual_info_regression(X, y, discrete_features=discrete_features)
+    mi_scores = mutual_info_regression(X, y, discrete_features=discrete_features)
     mi_scores = pd.Series(mi_scores, name="MI Scores", index=X.columns)
     mi_scores = mi_scores.sort_values(ascending=False)
     return mi_scores
-
-
-df = pd.read_csv("../input/fe-course-data/autos.csv")
 
 """
 We've selected four features that cover a range of properties.
@@ -102,8 +72,8 @@ think that salary is more important than age just because the values
 are higher.
 """
 
-# 1 - Setting up Target, setting up Features for PCA,
-# and scaling the Features
+# ---- Reading DataSet and Treating the Features ----
+df = pd.read_csv("../input/fe-course-data/autos.csv")
 features = ["highway_mpg", "engine_size", "horsepower", "curb_weight"]
 
 X = df.copy()
@@ -113,23 +83,20 @@ X = X.loc[:, features]
 X_scaled = (X - X.mean(axis=0)) / X.std(axis=0)
 
 
-# 2 - Importing library, calculating PCA, and converting the
-# results into a DataFrame
-from sklearn.decomposition import PCA
-
+# ---- Calculating PCA ----
 pca = PCA(n_components=2)
-X_pca = pca.fit_transform(X_scaled)
 
+X_pca = pca.fit_transform(X_scaled)
 component_names = [f"PC{i+1}" for i in range(X_pca.shape[1])]
 X_pca = pd.DataFrame(X_pca, columns=component_names)
 
 X_pca.head()
+print(pca.explained_variance_ratio_) # variance ratio
 
-# variance ratio
-print(pca.explained_variance_ratio_)
-
-# 3 - Getting the loadings (loadings are the variance and
-# correlations between each component created)
+# ---- Getting the Loadings ----
+#
+# \ loadings are the variance and correlations between each
+# created component
 loadings = pd.DataFrame(
     pca.components_.T,  # transpose the matrix of loadings
     columns=component_names,  # so the columns are the principal components
@@ -137,15 +104,15 @@ loadings = pd.DataFrame(
 )
 loadings
 
-# 4 - Plotting the Results
-plot_variance(pca);
-
+# ---- Calculating Mutual Info Scores and Plotting the Results ----
 mi_scores = make_mi_scores(X_pca, y, discrete_features=False)
 mi_scores
 
+plot_variance(pca);
+
 """
 
-{ image 4.1 }
+{ image 1.1 }
 
 This table of loadings is telling us that in the Size component,
 Height and Diameter vary in the same direction (same sign), but
