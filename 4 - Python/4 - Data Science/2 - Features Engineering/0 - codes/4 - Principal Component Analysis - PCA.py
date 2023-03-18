@@ -15,20 +15,6 @@ variance between these two features and return the Components
 
 { image 4 }
 
-Often, we can give names to these axes of variation. The longer
-axis we might call the "Size" component: small height and small
-diameter (lower left) contrasted with large height and large
-diameter (upper right). The shorter axis we might call the "Shape"
-component: small height and large diameter (flat shape)
-contrasted with large height and small diameter (round shape).
-
-Notice that instead of describing abalones by their 'Height'
-and 'Diameter', we could just as well describe them by their
-'Size' and 'Shape'. This, in fact, is the whole idea of PCA:
-instead of describing the data with the original features, we
-describe it with its axes of variation. The axes of variation
-become the new features.
-
 These new features are called the principal components of the
 data. The weights themselves are called loadings. There will be
 as many principal components as there are features in the
@@ -58,6 +44,8 @@ have an undue influence on the results;
     / when the features are multi-colinear (there's a significant 
 number of linear correlations between them);
     / when our goal is to apply denoising;
+    / when you want to check out whether clusters have similar
+properties and attributes
 """
 
 # 0 - Importing libraries, creating functions to plot PCA's
