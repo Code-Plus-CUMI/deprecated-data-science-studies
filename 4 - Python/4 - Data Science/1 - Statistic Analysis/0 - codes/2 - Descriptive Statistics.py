@@ -28,23 +28,23 @@ df.mode(axis=0)
 # - interquartile range
 # - variance (when df does not have outliers)
 # - standard deviation (when df does not have outliers)
-# - median absolute deviation (when df has outliers)
+# - standard error of the mean
+# - median absolute deviation/mad (when df has outliers)
 # - skewness
 # - kurtosis
-# - standard error of the mean
 max(df['feature']) - min(df['feature'])
 df['feature'].quantile(0) # 0, 0.25, 0.50, 0.75, 1
 df['feature'].quantile(0.75) - df['feature'].quantile(0.25)
 df['feature'].var()
 df['feature'].std()
-absolute_median_deviation = abs(df['feature'].median() - df['feature']).median()
+df['feature'].sem()
+df['feature'].mad()
 df['feature'].skew()
 df['feature'].kurt()
-df['feature'].sem()
 
 # Skew Data: as close to 1, it meas that the distribution is skewed
 # and we have to use the median and median absolute deviation to
-# describes the feature. Decereased Order: [skewed, peaked,
+# describes the feature. Decreased Order: [skewed, peaked,
 # normal, uniform]
 
 # Kutosis Data: as higher the value, the more the datas as spread
