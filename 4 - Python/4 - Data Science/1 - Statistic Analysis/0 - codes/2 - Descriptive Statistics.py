@@ -47,7 +47,7 @@ df['feature'].kurt()
 # describes the feature. Decreased Order: [skewed, peaked,
 # normal, uniform]
 
-# Kutosis Data: as higher the value, the more the datas as spread
+# Kurtosis Data: as higher the value, the more the datas as spread
 # over the distribution tail rather than the center. Decreased Order:
 # [peaked, skewed, normal, uniform]
 
@@ -55,11 +55,31 @@ df['feature'].kurt()
 
 # ---- Adding More Columns on Pandas Describe ----
 # Just With Functions
+# ---- Statistic Overview ----
 def describe(df, stats):
-	new_describe = df.describe()
-	return new_describe.append(df.reindex(d.columns, axis=1).agg(stats))
+    """
+    Add statistics metrics to a DataFrame. Mean Absolute Deviation (MAD) is always added.
+    
+    Since the function 'mad' will become deprecated in the next pandas versions, MAD must be 
+calculated manually.
+    """
+    
+    # ---- Calculating the Common Describe ----
+    common_describe = df.describe()
+    
+    # ---- Calculating Mean Absolute Deviation (MAD) ----
+    mad_describe = lambda df: pd.DataFrame((df - df.mean()).abs().mean()).T.set_index(pd.Index(['mad']))
+    mad_df = mad_describe(df)
+    
+    # ---- Calculating Other Statistics ----
+    stats_df = df.reindex(df.columns, axis=1).agg(stats)
+    
+    # ---- Concatenating the Results ----
+    return pd.concat([common_describe, mad_df, stats_df]).reindex(['count', 'mean', 'sem', 'var', 'std',  'median', 'mad', 'min',  '25%', '50%', '75%',  'max', 'skew',  'kurt'])
 
 describe(df, ['median', 'var', 'skew', 'kurt', 'sem'])
+
+df.mode()
 
 
 
